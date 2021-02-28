@@ -1,0 +1,79 @@
+.button-container,
+.welcome-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle
+{
+    border-radius: 1000px;
+}
+
+.mark-imp
+{
+    background-color: #ffee93;
+}
+
+/* light theme  */
+.btn 
+{
+    color: white;
+    background-color: #821752;
+}
+.searchBtn
+{
+    color: #821752;
+    border: #821752 solid 0.5px;
+    background-color: white;
+}
+
+.searchBtn:hover
+{
+    color: white;
+    background-color: #821752;
+}
+
+.btn:hover
+{
+    color: white;
+    background-color: #821752;
+    box-shadow: 0 6px 12px rgba(130, 23, 82, 0.3);
+}
+.navbar 
+{
+    background-color: #f8e8b7;
+}
+
+/* dark theme */
+
+.dark-text 
+{
+    color:#fff;
+}
+
+
+
+.dark-navbar,
+ .dark-card 
+
+{
+    background-color: #393e46;
+}
+
+/* .dark-btn 
+{
+    background-color: #29a19c;
+} */
+
+.dark-body
+{
+    background-color: #222831;
+    color: #fff;
+}
+
+.dark-text-inner
+{
+color: #222831;
+}
