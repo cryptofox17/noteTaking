@@ -1,10 +1,16 @@
-
+let counter=0;
 // If a user adds a note, it gets added to the localStorage 
 showNotes();
+
+//Adding a new note
 let addBtn = document.getElementById('addBtn');
 addBtn.addEventListener("click", function (e) {
     let addTxt = document.getElementById('addTxt'); //placeholder 
     let addTitle = document.getElementById('addTitle');
+    if (addTitle.value != "" && addTxt.value !="")
+    {
+
+    
     let notes = localStorage.getItem('notes');
     let d = new Date();
     let datestring = d.getDate()  + "-" + (d.getMonth()+1) + "-" + d.getFullYear() + " " +d.getHours() + ":" + d.getMinutes();
@@ -19,14 +25,21 @@ addBtn.addEventListener("click", function (e) {
     let obj = {
         title: addTitle.value,
         text: addTxt.value,
-        time: datestring
+        time: datestring,
+        noteloc: counter 
     }
+    counter++;
     notesObj.push(obj);
     localStorage.setItem("notes", JSON.stringify(notesObj));
     addTxt.value = "";
     addTitle.value="";
     // console.log(notesObj);
     showNotes();
+ }
+ else 
+ {
+     //
+ }
 
 })
 
@@ -45,9 +58,9 @@ function showNotes()
 
     notesObj.forEach(function(element, index){
         html += `
-        <div class="noteCard card my-2 mx-2" style="width: 15rem;">
+        <div class="noteCard card my-2 mx-2" style="width: 240px;">
         <div class="card-body">
-          <h5 class="card-title">${element.title}</h5>
+          <h5 class="card-title" style="font-weight:600">${element.title}</h5>
           <p class="card-text">${element.text}</p>
           <small> ${element.time} </small>
           <hr>
@@ -101,6 +114,8 @@ function markNote(index)
 {
     let targetEl= document.getElementById(index);
     targetEl.parentElement.parentElement.classList.toggle('mark-imp');
+
+
 }
 
 //Function to search notes
@@ -135,6 +150,7 @@ toggleBtn.addEventListener("click",(e)=>{
     // })
     document.querySelector("nav").classList.toggle('dark-navbar');
     document.getElementById("notes").classList.toggle('dark-text-inner');
+    document.querySelector("h1").classList.toggle('h1-dark');
 
 });
 //Toggle 
