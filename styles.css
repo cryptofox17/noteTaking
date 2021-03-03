@@ -1,3 +1,4 @@
+
 .button-container,
 .welcome-container
 {
@@ -9,12 +10,23 @@
 .toggle
 {
     border-radius: 1000px;
+    font-size: 9px;
+}
+
+.notes-display 
+{   margin: auto;
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
 }
 
 .mark-imp
 {
     background-color: #ffee93;
 }
+
+
+  
 
 /* light theme  */
 .btn 
@@ -60,6 +72,10 @@
 
 {
     background-color: #393e46;
+    
+}
+.dark-navbar i
+{   color: #e16df5;
 }
 
 /* .dark-btn 
@@ -77,3 +93,11 @@
 {
 color: #222831;
 }
+
+.h1-dark
+ {
+
+    background: -webkit-linear-gradient(left,rgba(225,109,245,1),  rgba(78,248,231,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
